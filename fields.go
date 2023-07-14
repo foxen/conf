@@ -61,9 +61,9 @@ func extractFields(prefix []string, target interface{}) ([]Field, error) {
 		return nil, ErrInvalidStruct
 	}
 	s = s.Elem()
-	if s.Kind() != reflect.Struct {
-		return nil, ErrInvalidStruct
-	}
+	// if s.Kind() != reflect.Struct {
+	//	return nil, ErrInvalidStruct
+	// }
 	targetType := s.Type()
 
 	var fields []Field
